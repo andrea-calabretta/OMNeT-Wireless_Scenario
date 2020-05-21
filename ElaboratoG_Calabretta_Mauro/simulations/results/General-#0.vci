@@ -1,0 +1,486 @@
+file 18307 1590070054                                           
+version 2
+run General-0-20200521-16:07:11-3668
+attr configname General
+attr datetime 20200521-16:07:11
+attr experiment General
+attr inifile new.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Network
+attr processid 3668
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.num_tx 16
+param **.num_frw 4
+param **.constraintAreaMaxX 500m
+param **.constraintAreaMaxY 500m
+param **.constraintAreaMaxZ 0m
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.rx.mobility.initialZ 0m
+param **.frw[*].mobility.initialZ 0m
+param **.tx[*].mobility.initialZ 0m
+param **.rx.mobility.initialX 250m
+param **.rx.mobility.initialY 250m
+param **.frw[0].mobility.initialX 350m
+param **.frw[0].mobility.initialY 100m
+param **.frw[1].mobility.initialX 350m
+param **.frw[1].mobility.initialY 350m
+param **.frw[2].mobility.initialX 200m
+param **.frw[2].mobility.initialY 100m
+param **.frw[3].mobility.initialX 200m
+param **.frw[3].mobility.initialY 350m
+param **.rx.mobility.typename "\"StationaryMobility\""
+param **.rx.mobility.initFromDisplayString false
+param **.frw[*].mobility.typename "\"StationaryMobility\""
+param **.frw[*].mobility.initFromDisplayString false
+param **.tx[*].mobility.typename "\"MassMobility\""
+param **.tx[*].mobility.initFromDisplayString false
+param **.tx[*].mobility.changeInterval "truncnormal(2s, 0.5s)"
+param **.tx[*].mobility.angleDelta "normal(0deg, 30deg)"
+param **.tx[*].mobility.speed "truncnormal(20mps, 8mps)"
+param **.tx[*].mobility.updateInterval 100ms
+param **.radioMedium.pathLoss.typename "\"LogNormalShadowing\""
+param **.radioMedium.pathLoss.alpha 3
+param **.radioMedium.pathLoss.sigma 7
+param **.numApps 1
+param **.rx.app[0].typename "\"UdpSink\""
+param **.rx.app[0].localPort 2345
+param **.frw[*].app[0].typename "\"UdpSink\""
+param **.frw[*].app[0].localPort 2345
+param **.tx[*].app[0].typename "\"UdpBasicApp\""
+param **.tx[*].app[0].destPort 2345
+param **.tx[*].app[0].destAddresses "\"rx\""
+param **.tx[*].app[0].messageLength 100B
+param **.tx[*].app[0].startTime "uniform(0s, 10ms)"
+param **.tx[*].app[0].sendInterval 20ms
+param **.tx[*].app[0].packetName "\"Data\""
+param **.networkConfiguratorModule "\"networkConfigurator\""
+param **.networkConfigurator.config "xmldoc(\"scenario.xml\")"
+param **.tx[*].hasIpv4 false
+param **.tx[*].hasIpv6 false
+param **.tx[*].hasGn true
+param **.tx[*].generic.typename "\"NextHopNetworkLayer\""
+param **.frw[*].hasIpv4 false
+param **.frw[*].hasIpv6 false
+param **.frw[*].hasGn true
+param **.frw[*].generic.typename "\"NextHopNetworkLayer\""
+param **.frw[*].generic.nextHop.hopLimit 4
+param **.rx.hasIpv4 false
+param **.rx.hasIpv6 false
+param **.rx.hasGn true
+param **.rx.generic.typename "\"NextHopNetworkLayer\""
+param **.networkConfigurator.typename "\"NextHopNetworkConfigurator\""
+param *.tx[*].wlan[2].radio.displayCommunicationRange true
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.physicalLinkVisualizer.displayLinks true
+param *.tx[*].wlan[0].radio.transmitter.communicationRange 500m
+param *.tx[*].wlan[0].radio.displayCommunicationRange true
+
+vector 0 Network.tx[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 Network.tx[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 Network.tx[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 Network.tx[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 4 Network.tx[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 Network.tx[2].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 6 Network.tx[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 Network.tx[3].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 8 Network.tx[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 Network.tx[4].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 10 Network.tx[5].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 11 Network.tx[5].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 12 Network.tx[6].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 13 Network.tx[6].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 14 Network.tx[7].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 15 Network.tx[7].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 16 Network.tx[8].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 17 Network.tx[8].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 18 Network.tx[9].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 19 Network.tx[9].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 20 Network.tx[10].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 21 Network.tx[10].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 22 Network.tx[11].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 23 Network.tx[11].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 24 Network.tx[12].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 25 Network.tx[12].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 26 Network.tx[13].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 27 Network.tx[13].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 28 Network.tx[14].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 29 Network.tx[14].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 30 Network.tx[15].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 31 Network.tx[15].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 32 Network.rx.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 33 Network.rx.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 34 Network.frw[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 35 Network.frw[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 36 Network.frw[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 37 Network.frw[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 38 Network.frw[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 39 Network.frw[2].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 40 Network.frw[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 41 Network.frw[3].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 42 Network.tx[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 43 Network.tx[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 44 Network.tx[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 45 Network.tx[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 46 Network.tx[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 47 Network.tx[5].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 48 Network.tx[6].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 49 Network.tx[7].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 50 Network.tx[8].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 51 Network.tx[9].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 52 Network.tx[10].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 53 Network.tx[11].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 54 Network.tx[12].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 55 Network.tx[13].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 56 Network.tx[14].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 57 Network.tx[15].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 58 Network.rx.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 59 Network.frw[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 60 Network.frw[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 61 Network.frw[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 62 Network.frw[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 63 Network.tx[0].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 64 Network.tx[1].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 65 Network.tx[2].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 66 Network.tx[3].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 67 Network.tx[4].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 68 Network.tx[5].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 69 Network.tx[6].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 70 Network.tx[7].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 71 Network.tx[8].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 72 Network.tx[9].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 73 Network.tx[10].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 74 Network.tx[11].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 75 Network.tx[12].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 76 Network.tx[13].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 77 Network.tx[14].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 78 Network.tx[15].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 79 Network.rx.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 80 Network.frw[0].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 81 Network.frw[1].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 82 Network.frw[2].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 83 Network.frw[3].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+0	17171 24 0 0 0 0 3 0 2 2 4
+1	17195 8 0 0 0 0 1 0 0 0 0
+2	17203 24 0 0 0 0 3 0 2 2 4
+3	17227 8 0 0 0 0 1 0 0 0 0
+4	17235 24 0 0 0 0 3 0 2 2 4
+5	17259 8 0 0 0 0 1 0 0 0 0
+6	17267 24 0 0 0 0 3 0 2 2 4
+7	17291 8 0 0 0 0 1 0 0 0 0
+8	17299 24 0 0 0 0 3 0 2 2 4
+9	17323 8 0 0 0 0 1 0 0 0 0
+10	17331 27 0 0 0 0 3 0 2 2 4
+11	17358 9 0 0 0 0 1 0 0 0 0
+12	17367 27 0 0 0 0 3 0 2 2 4
+13	17394 9 0 0 0 0 1 0 0 0 0
+14	17403 27 0 0 0 0 3 0 2 2 4
+15	17430 9 0 0 0 0 1 0 0 0 0
+16	17439 27 0 0 0 0 3 0 2 2 4
+17	17466 9 0 0 0 0 1 0 0 0 0
+18	17475 27 0 0 0 0 3 0 2 2 4
+19	17502 9 0 0 0 0 1 0 0 0 0
+20	17511 27 0 0 0 0 3 0 2 2 4
+21	17538 9 0 0 0 0 1 0 0 0 0
+22	17547 27 0 0 0 0 3 0 2 2 4
+23	17574 9 0 0 0 0 1 0 0 0 0
+24	17583 27 0 0 0 0 3 0 2 2 4
+25	17610 9 0 0 0 0 1 0 0 0 0
+26	17619 27 0 0 0 0 3 0 2 2 4
+27	17646 9 0 0 0 0 1 0 0 0 0
+28	17655 27 0 0 0 0 3 0 2 2 4
+29	17682 9 0 0 0 0 1 0 0 0 0
+30	17691 27 0 0 0 0 3 0 2 2 4
+31	17718 9 0 0 0 0 1 0 0 0 0
+32	17727 27 0 0 0 0 3 0 2 2 4
+33	17754 9 0 0 0 0 1 0 0 0 0
+34	17763 27 0 0 0 0 3 0 2 2 4
+35	17790 9 0 0 0 0 1 0 0 0 0
+36	17799 27 0 0 0 0 3 0 2 2 4
+37	17826 9 0 0 0 0 1 0 0 0 0
+38	17835 27 0 0 0 0 3 0 2 2 4
+39	17862 9 0 0 0 0 1 0 0 0 0
+40	17871 27 0 0 0 0 3 0 2 2 4
+41	17898 9 0 0 0 0 1 0 0 0 0
+42	17907 9 0 0 0 0 1 1 1 1 1
+43	17916 9 0 0 0 0 1 1 1 1 1
+44	17925 9 0 0 0 0 1 1 1 1 1
+45	17934 9 0 0 0 0 1 1 1 1 1
+46	17943 9 0 0 0 0 1 1 1 1 1
+47	17952 9 0 0 0 0 1 1 1 1 1
+48	17961 9 0 0 0 0 1 1 1 1 1
+49	17970 9 0 0 0 0 1 1 1 1 1
+50	17979 9 0 0 0 0 1 1 1 1 1
+51	17988 9 0 0 0 0 1 1 1 1 1
+52	17997 9 0 0 0 0 1 1 1 1 1
+53	18006 9 0 0 0 0 1 1 1 1 1
+54	18015 9 0 0 0 0 1 1 1 1 1
+55	18024 9 0 0 0 0 1 1 1 1 1
+56	18033 9 0 0 0 0 1 1 1 1 1
+57	18042 9 0 0 0 0 1 1 1 1 1
+58	18051 9 0 0 0 0 1 1 1 1 1
+59	18060 9 0 0 0 0 1 1 1 1 1
+60	18069 9 0 0 0 0 1 1 1 1 1
+61	18078 9 0 0 0 0 1 1 1 1 1
+62	18087 9 0 0 0 0 1 1 1 1 1
+63	18096 10 0 0 0 0 1 31 31 31 961
+64	18106 10 0 0 0 0 1 31 31 31 961
+65	18116 10 0 0 0 0 1 31 31 31 961
+66	18126 10 0 0 0 0 1 31 31 31 961
+67	18136 10 0 0 0 0 1 31 31 31 961
+68	18146 10 0 0 0 0 1 31 31 31 961
+69	18156 10 0 0 0 0 1 31 31 31 961
+70	18166 10 0 0 0 0 1 31 31 31 961
+71	18176 10 0 0 0 0 1 31 31 31 961
+72	18186 10 0 0 0 0 1 31 31 31 961
+73	18196 10 0 0 0 0 1 31 31 31 961
+74	18206 10 0 0 0 0 1 31 31 31 961
+75	18216 10 0 0 0 0 1 31 31 31 961
+76	18226 10 0 0 0 0 1 31 31 31 961
+77	18236 10 0 0 0 0 1 31 31 31 961
+78	18246 10 0 0 0 0 1 31 31 31 961
+79	18256 10 0 0 0 0 1 31 31 31 961
+80	18266 10 0 0 0 0 1 31 31 31 961
+81	18276 10 0 0 0 0 1 31 31 31 961
+82	18286 10 0 0 0 0 1 31 31 31 961
+83	18296 10 0 0 0 0 1 31 31 31 961
+
