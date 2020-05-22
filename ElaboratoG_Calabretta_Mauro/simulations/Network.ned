@@ -11,7 +11,7 @@ import inet.visualizer.integrated.IntegratedMultiVisualizer;
 network Network
 {
     parameters:
-        @display("bgb=799,505");
+        @display("bgb=980.334,586.368");
         int num_tx;
         int num_frw;
 
@@ -20,16 +20,16 @@ network Network
             @display("p=365.462,153.718");
         }
         networkConfigurator: <> like INetworkConfigurator {
-            @display("p=127,71");
+            @display("p=26.468,23.414");
         }
         radioMedium: Ieee80211ScalarRadioMedium {
-            @display("p=127,176");
+            @display("p=26.468,86.53");
         }
         visualizer: IntegratedMultiVisualizer {
-            @display("p=127,303");
+            @display("p=26.468,153.718");
         }
         routingTableRecorder: RoutingTableRecorder {
-            @display("p=127,422");
+            @display("p=26.468,215.816");
         }
         rx: AdhocHost {
             @display("p=655.592,152.7;i=device/receiverdish");
