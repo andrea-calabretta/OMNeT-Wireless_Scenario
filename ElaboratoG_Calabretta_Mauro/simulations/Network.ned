@@ -17,24 +17,24 @@ network Network
 
     submodules:
         tx[num_tx]: AdhocHost {
-            @display("p=365.462,153.718");
+            @display("p=382.53,199.26;i=,black,0");
         }
         networkConfigurator: <> like INetworkConfigurator {
-            @display("p=26.468,23.414");
+            @display("p=937.26,51.66");
         }
         radioMedium: Ieee80211ScalarRadioMedium {
-            @display("p=26.468,86.53");
+            @display("p=937.26,163.59");
         }
         visualizer: IntegratedMultiVisualizer {
-            @display("p=26.468,153.718");
+            @display("p=937.26,307.5");
         }
         routingTableRecorder: RoutingTableRecorder {
-            @display("p=26.468,215.816");
+            @display("p=933.57,484.62");
         }
         rx: AdhocHost {
-            @display("p=655.592,152.7;i=device/receiverdish");
+            @display("p=724.47,211.56;i=device/receiverdish");
         }
         frw[num_frw]: AdhocHost {
-            @display("p=509,176.114;i=device/antennatower");
+            @display("p=541.2,333.33;i=device/antennatower");
         }
 }
