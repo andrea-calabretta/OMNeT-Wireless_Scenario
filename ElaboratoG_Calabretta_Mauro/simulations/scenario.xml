@@ -1,4 +1,5 @@
 <config>
-    <interface host="*" address="10.0.0.x" netmask="255.255.255.255"/>
-    <autoroute metric="hopCount" sourceHosts="**" destinationInterfaces="*.wlan0" />
+	<interface rx="*" address="10.0.0.x" netmask="255.255.255.x"/>
+    <interface tx="*" address="10.0.0.x" netmask="255.255.255.x"/>
+    <interface frw="*" address="10.0.0.x" netmask="255.255.255.x"/>
 </config>
