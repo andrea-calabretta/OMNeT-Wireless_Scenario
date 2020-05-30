@@ -4,6 +4,6 @@ Inserire i file presenti nella cartella "Modifiche" (backChunk.msg, backChunk_m.
 
 inet/src/inet/networklayer/nexthop
 
-Sostituirli con quelli già presenti
+Sovrascrivere quelli già presenti
 
 
